@@ -6,7 +6,7 @@ def cheese
   sample :ambi_piano
 end
 
-def bologna(expired)
+def bologna
   sample :ambi_haunted_hum
 end
 
