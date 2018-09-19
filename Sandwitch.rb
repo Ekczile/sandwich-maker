@@ -6,7 +6,7 @@ def cheese
   sample :ambi_piano
 end
 
-def bologna(expired)
+def bologna
   sample :ambi_haunted_hum
 end
 
@@ -15,24 +15,28 @@ def want_miracle_whip?
 end
 
 def miracle_whip(amount)
+  print "amount #{amount}"
   if amount >= 5
     sample :bd_zome
   else
     sample :bd_pure, rate: amount
+    print "amount #{amount}"
     sleep 1
     miracle_whip(amount +1)
   end
 end
 
 def want_ketchup?
-  1==[1,2].choose
+  1 == [1,2].choose
 end
 
 def ketchup(amount)
   if amount >= 5
+    print "amount #{amount}"
     sample :bd_ada
   else
     sample :ambi_drone, rate: amount
+    print "amount #{amount}"
     sleep 1
     ketchup(amount +1)
   end
@@ -43,10 +47,12 @@ def want_mustard?
 end
 
 def mustard(amount)
+  print "amount #{amount}"
   if amount >= 5
     sample :ambi_soft_buzz
   else
     sample :bd_klub, rate: amount
+    print "amount #{amount}"
     sleep 1
     mustard(amount + 1)
   end
